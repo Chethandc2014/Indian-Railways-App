@@ -1,3 +1,32 @@
-.home-page-header{
+.user-details {
+	background-color: orange !important;
+}
+
+.left-top-cont {
+	text-align: left;
+}
+
+.right-top-cont {
+	
+}
+
+.home-page-header {
 	background-color: orange;
+	border: 1px solid;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.padding-rm-bckgclr{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+	background-color: #ffa17f;
+	height: 70vh;
+
+}
+
+
+.home-page-footer{
+	background-color: purple;
+	height: 
 }
