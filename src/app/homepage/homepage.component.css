@@ -1,5 +1,7 @@
 .user-details {
 	background-color: orange !important;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .left-top-cont {
@@ -11,22 +13,22 @@
 }
 
 .home-page-header {
-	background-color: orange;
+	background-color: #06e0ff;
 	border: 1px solid;
 	padding-top: 10px;
-	padding-bottom: 10px;
+	display: inline-block;
+	width: 100%;
+	vertical-align:top;
 }
 
 .padding-rm-bckgclr{
 	padding-left: 0px !important;
 	padding-right: 0px !important;
 	background-color: #ffa17f;
-	height: 70vh;
-
+	height: 80vh;
 }
 
-
 .home-page-footer{
-	background-color: purple;
-	height: 
+	background-color: silver;
+	height: 10vh;
 }
