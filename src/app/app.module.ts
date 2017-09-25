@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
-import {} from 'ngx-bootstrap'
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import {} from 'ngx-bootstrap'
     LoginComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
