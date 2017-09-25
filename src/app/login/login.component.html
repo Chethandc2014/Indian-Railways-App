@@ -4,26 +4,32 @@
 </div>
 <div class="container login-makeup">
 	<div class="login-col">
-	 <form class="form-horizontal">
-		<div class="col-md-12 col-lg-12">
+	 <form class="form-horizontal" #LoginForm="ngForm" novalidate>
+		<div class="col-md-12 col-lg-12"  >
 			<div class="form-group">
 				<label class="control-label col-md-6 col-lg-4">User Name:</label>
 				<div class="col-md-6 col-lg-8">
-					<input type="text"    class="form-control" placeholder="Enter UserName" />
+					<input type="text"    class="form-control" placeholder="UserName" name="name"      [(ngModel)]="loginUser.name"/>
+					<!-- <span [hidden]="" class="alert-danger">Password field is required</span> -->
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label col-md-6 col-lg-4">Password:</label>
 				<div class="col-md-6 col-lg-8">
-					<input type="password" class="form-control" placeholder="Enter Password"/>
+					<input type="password" class="form-control" placeholder="Password" #pwd name="password" required  [(ngModel)]="loginUser.password"/>
+					<!-- <span [hidden]="!(pwd.errors.dirty)pwd.errors.required" style="color: #ff4e4b">Password field is required</span> -->
 				</div>
 			</div>
 			<div class="form-group" style="margin-top: 10%">
-				<div class="col-md-3 col-md-offset-3 col-lg-3 ">
-					<button type="submit"  class="btn btn-default">Login</button>
+				<div class="col-md-3 col-md-offset-4 col-lg-3 col-offset-3 ">
+					<button type="submit"  class="btn btn-primary" [disabled]="!LoginForm.form.valid" (click)="submit()">Login</button>
 				</div>
 			</div>
 		</div>
 		</form>
+		<pre>Login Form Fields:{{LoginForm.value | json}}</pre>
+		<pre>Form is valide:{{LoginForm.form.valid}}</pre>
+		<pre>Login User Model:{{loginUser}}</pre>
+		<!-- <pre>Field info:{{pwd.errors.required}}</pre> -->
 	</div>
 </div>
