@@ -21,8 +21,6 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
   submit(){
-    log('Inside submit method');
-    let success= this.authenticateService.login(this.loginUser);
-    log('Authenticaiton----'+success)
+   this.authenticateService.login(this.loginUser);
   }
 }
