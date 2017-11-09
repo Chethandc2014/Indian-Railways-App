@@ -6,7 +6,6 @@ import { Observable } from 'rxjs/Observable';
 import {log} from 'util';
 import 'rxjs/add/operator/toPromise';
 
-
 @Injectable()
 export class AuthenticateService {
 
@@ -16,7 +15,7 @@ export class AuthenticateService {
     log('Beging of login method UserDtails::' + loginUser);
     let name=loginUser.name;
     let password=loginUser.password;
-    return this.http.get('api/authentication?name=${name}&&password=${password}').toPromise().then(res => {
+    return this.http.get('api/user?name=${name}&&password=${password}').toPromise().then(res => {
       console.log(res.json().data);
       //data=res.json().data.length>0;
     }

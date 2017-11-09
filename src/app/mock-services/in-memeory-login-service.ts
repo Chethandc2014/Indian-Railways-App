@@ -2,9 +2,9 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 export class InMemeoryLoginService implements InMemoryDbService{
   createDb(){
-    let authentication=[
+    let user=[
      {'name':'chethan','password':'pass'}
     ];
-    return {authentication};
+    return {user};
   }
 }
