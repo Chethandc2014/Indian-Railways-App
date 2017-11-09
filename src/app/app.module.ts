@@ -11,7 +11,12 @@ import { LoginComponent } from './login/login.component';
 import { InMemeoryLoginService } from './mock-services/in-memeory-login-service';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Route, RouterModule } from '@angular/router';
 
+const ROUTES:Route[]=[
+                     {path:'',component:LoginComponent},
+                     {path:'home',component:HomepageComponent}
+                     ];
 
 @NgModule({
   declarations: [
@@ -24,7 +29,8 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     FormsModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemeoryLoginService)
+    InMemoryWebApiModule.forRoot(InMemeoryLoginService),
+    RouterModule.forRoot(ROUTES),
   ],
   providers: [],
   bootstrap: [AppComponent]
