@@ -12,9 +12,15 @@
 <div class="container-fluid padding-rm-bckgclr">
 	<div class="left-menu">
 		<ul>
-			<li class="dropdown"><a href="javascript:void(0);">TICKET BOOKING</a>
-				<div class="dropdown-content">
-					<form>
+			<li class="dropdown" >
+				<a class="dropdown-toggle" data-toggle="dropdown"  href="#">TICKET BOOKING</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a>A</a>
+						<a>B</a>
+					</li>
+					
+					<!-- <form>
 						<div class="input-group">
 							<label>Source</label> <input class="form-control" type="text" />
 						</div>
@@ -25,13 +31,13 @@
 						<div class="input-group">
 							<label>Date of Journey</label>
 							<div class="input-group date">
-								<input type="text" class="form-control" placeholder="mm/dd/yyyy" style="padding-left: 50px">
-								<div class="input-group-addon">
-									<span class="glyphicon glyphicon-th"></span>
+								<input type="text" class="form-control" bsDatepicker #dp="bsDatepicker" [bsConfig]="bsConfig" placeholder="mm/dd/yyyy" style="padding-left: 50px">
+								<div class="input-group-addon" (click)="dp.show()">
+									<span class="glyphicon glyphicon-calendar" ></span>
 								</div>
 							</div>
 						</div>
-					</form>
+					</form> -->
 
 					<!-- 
 					<ul>
@@ -39,16 +45,16 @@
 						<li><a href="#">Destination</a></li>
 						<li><a href="#">Date of Journey</a></li>
 					</ul> -->
-				</div></li>
+				</ul></li>
 			<li><a href="javascript:void(0);">FAVOURITE JOURNEYS</a></li>
 			<li><a href="javascript:void(0);">PROFILE</a></li>
 			<li><a href="javascript:void(0);">PYMENT SYSTEM</a></li>
 		</ul>
 	</div>
 </div>
-<div class="home-page-footer">
+<!-- <div class="home-page-footer">
 	<div>
 		Copyright&nbsp;<i class="fa fa-copyright" aria-hidden="true"></i>&nbsp;2017-Indian
 		Railways.All rights are reserved.
 	</div>
-</div>
+</div> -->

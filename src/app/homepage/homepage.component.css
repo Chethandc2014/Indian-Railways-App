@@ -3,24 +3,22 @@
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-top: 27px;
+	
 }
 
 .left-top-cont {
 	text-align: left;
 }
 
-.right-top-cont {
-	
-}
-
 .home-page-header {
-	background-color: #06e0ff;
+	background-color: #333;
 	border: 1px solid;
 	padding-top: 10px;
 	display: inline-block;
 	width: 100%;
 	vertical-align: top;
 	height: 80px;
+	color:white;
 }
 
 .padding-rm-bckgclr {
@@ -37,7 +35,7 @@
 .left-menu {
 	width: 200px;
 	height: 100%;
-	background-color: #5f5f5f;
+	background-color: #333;
 	border: 1px solid;
 	border-top: 0;
 }
@@ -67,17 +65,17 @@ div.left-menu>ul>li>a {
 }
 
 div.left-menu>ul>li:hover {
-	background-color: #333;
+	background-color: #5f5f5f;
 }
 
 .dropdown:hover>.dropdown-content {
 	display: block;
 }
 
-.dropdown-content {
-	display: none;
+.dropdown-menu {
 	position: absolute;
-	left: 198px
+	left: 100%;
+	top: -1px;
 }
 
 div.dropdown-content>ul>li>a {
