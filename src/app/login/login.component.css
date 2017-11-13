@@ -1,11 +1,11 @@
 .login-makeup{
-	background-color: #ffd9d9;
+	background-color: #d9ffdc;
 	border: thin solid;
 	border-radius: 5px;
 	margin:auto;
 	width: 50%;
 	margin-top: 5%;
-	padding-bottom:2%
+	padding-bottom:2%;
 }
 
 .login-col{
@@ -20,4 +20,8 @@
 
 .loginpop{
 	margin-top: 10%;
+}
+
+.form-align{
+	margin-top:70px;
 }
