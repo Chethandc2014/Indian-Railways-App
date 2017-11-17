@@ -4,12 +4,17 @@
 			<div>Welcome: Chethana D C</div>
 			<div>Last Login Time:10/05/2017 10.10 PM</div>
 		</div>
-		<div class="pull-right right-top-cont">
-			<i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+		<div class="pull-right right-top-cont dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><i  class="fa fa-user fa-2x" aria-hidden="true"></i>
+				<span class="caret"></span></a>
+			<ul class="dropdown-menu" role="menu">
+				<li>Settings<i class=""></i></li>
+				<li>Logout<i class=""></i></li>
+			</ul>
 		</div>
 	</div>
 </div>
-<div class="container-fluid padding-rm-bckgclr">
+<div >
 	<div class="left-menu">
 		<ul>
 			<li class="dropdown" >
@@ -26,11 +31,14 @@
 						<div class="input-group">
 							<label>Date of Journey</label>
 							<div class="input-group date">
-								<input type="text" class="form-control" bsDatepicker #dp="bsDatepicker" [bsConfig]="bsConfig" placeholder="mm/dd/yyyy" style="padding-left: 50px">
+								<input type="text" class="form-control" bsDatepicker #dp="bsDatepicker" [bsConfig]="bsConfig" placeholder="MM/DD/YYYY" style="padding-left:41px">
 								<div class="input-group-addon" (click)="dp.show()">
 									<span class="glyphicon glyphicon-calendar" ></span>
 								</div>
 							</div>
+						</div>
+						<div class="input-group">
+							<button class="btn" (click)="addNewTab()" >Search</button>
 						</div>
 					</form>
 				</div></li>
@@ -38,6 +46,16 @@
 			<li><a href="javascript:void(0);">PROFILE</a></li>
 			<li><a href="javascript:void(0);">PYMENT SYSTEM</a></li>
 		</ul>
+	</div>
+	<div class="container-fluid main-content">
+		<tabset>
+			<tab *ngFor="let tabz of tabs" >
+				 [heading]="tabz.title"
+				 [removable]="tabz.removable"
+			    
+			</tab>
+		  </tabset>
+
 	</div>
 </div>
 <!-- <div class="home-page-footer">
