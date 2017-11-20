@@ -46,9 +46,9 @@ color:white;
 }
 div.main-content{
 	float:left;
-	width:auto;
-	height:auto;
 	background-color: aqua;
+	width:calc(100% - 200px);
+	height:100vh;
 }
 div.left-menu ul {
 	list-style-type: none;

@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker/bs-datepicker.config';
+import { ChangeDetectionStrategy } from '@angular/core';
+
 
 @Component({
   selector: 'app-homepage',
+  changeDetection:ChangeDetectionStrategy.OnPush,
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
@@ -20,8 +23,9 @@ export class HomepageComponent implements OnInit {
   addNewTab(): void {
     const newTabIndex = this.tabs.length + 1;
     this.tabs.push({
-      title: `${newTabIndex}`,
+      title: `Tab ${newTabIndex}`,
       content: `Dynamic content ${newTabIndex}`,
+      active:true,
       removable: true
     });
   };
