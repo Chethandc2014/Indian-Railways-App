@@ -17,9 +17,9 @@
 <div class="warapper">
 	<div class="left-menu">
 		<ul>
-			<li class="dropdown" >
-				<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">TICKET BOOKING</a>
-				<div  class="dropdown-menu" role="menu">
+			<li class="dropdown" (click)="$event.stopPropagation()">
+				<a  href="javascript:void(0);" (click)="opensearchMenu()">TICKET BOOKING</a>
+				<div  class="dropdown-menu" role="menu" [ngClass]="{'showMenu':showDropdownMenu}">
 					<form>
 						<div class="input-group">
 							<label>Source</label> <input class="form-control" type="text" />
