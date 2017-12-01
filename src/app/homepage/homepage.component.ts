@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker/bs-datepicker.config';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { Renderer2 } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import { ElementRef } from '@angular/core';
 
 
 @Component({
@@ -21,12 +23,16 @@ export class HomepageComponent implements OnInit {
   constructor(private renderer:Renderer2){
   }
  
+  @ViewChild('dp') dropdwon:ElementRef;
+
   ngOnInit() {
    this.bsConfig=Object.assign({},{containerClass:'theme-default'});
    this.renderer.listen('window','click',(event)=>{
      console.log(event);
-     ///$(".dropdown-menu").removeClass("showMenu");
-    /// this.elemRef.
+      if(!event.target.attributes.hasOwnProperty('bsdatepickerdaydecorator')){
+        this.renderer.removeClass(this.dropdwon.nativeElement,'showMenu');
+      }
+      
    });
   }
   public dateOfJourney:Date=new Date();

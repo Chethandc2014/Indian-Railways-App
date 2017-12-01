@@ -91,6 +91,7 @@ div.left-menu .dropdown-menu {
 	text-align:center;
 	width: 175px;
 	padding:3px;
+	z-index:1;
 }
 
 div.dropdown-content>ul>li>a {
