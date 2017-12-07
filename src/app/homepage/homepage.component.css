@@ -16,6 +16,7 @@ color:white;
 }
 .home-page-header {
 	background-color: #333;
+	background:linear-gradient(135deg,#ea5c54,#bb6dec);
 	border: 1px solid;
 	padding-top: 10px;
 	display: inline-block;
@@ -39,7 +40,7 @@ color:white;
 .left-menu {
 	width: 200px;
 	height: 100vh;
-	background-color: #333;
+	background-color: #ea5c54;
 	border: 1px solid;
 	border-top: 0;
 }
@@ -69,7 +70,7 @@ div.left-menu>ul>li>a {
 } 
 
 div.left-menu>ul>li:hover {
-	background-color: #5f5f5f;
+	background-color: #f08c8c;
 }
 
 /* .dropdown:hover>.dropdown-content {
@@ -80,10 +81,10 @@ div.left-menu .dropdown-menu {
 	position: absolute;
 	left: 100%;
 	top: -1px;
-	background-color:#333;
+	background-color:#ea5c54;
 	color:white;
 	text-align:center;
-	width: 175px;
+	width: 215px;
 	padding:3px;
 }
 
@@ -130,4 +131,15 @@ div.right-top-cont>ul{
 }
 div.right-top-cont>ul>li:hover{
 	background-color: #5f5f5f;
+}
+
+.searchBtn{
+margin-left:70px;
+margin-top:10px;
+background-color:#7b0b0b;
+color: white;
+}
+
+.searchBtn:hover{
+	color:white;
 }
