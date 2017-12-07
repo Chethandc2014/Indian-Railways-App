@@ -33,6 +33,7 @@ Indian Railways App is Personal Project coded to understand latest technologies
 
 
 #Reference ##COMMANDS
+git init  -- initialising local git repo
 git clone repourl
 git pull
 git status
