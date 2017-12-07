@@ -46,6 +46,9 @@ git remote show origin   -- To Check where is rempo is cloned from
 git remote add origin https://github.com/Chethandc2014/Indian-Railways-App.git  Adding Local repo to remote 
 git remote -v  Verifies the new remote URL
 git push origin master
+git branch -d hotfix  -- Delete branch hotfix
+[git checkout master
+git merge hotfix] --Merging Master branch to Hotfix branch Code
 
 echo > fileName  --- creating new file
 rm fileName      --- to remove/delete the file 
