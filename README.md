@@ -34,6 +34,7 @@ Indian Railways App is Personal Project coded to understand latest technologies
 
 #Reference ##COMMANDS
 git init  -- initialising local git repo
+git push  <REMOTENAME> <BRANCHNAME> --> [REMOTENAME-->origin,BRANCHNAME-Name of local branch]---To push the code to remote branch
 git clone repourl
 git pull
 git status
