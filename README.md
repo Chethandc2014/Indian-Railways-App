@@ -36,6 +36,7 @@ Indian Railways App is Personal Project coded to understand latest technologies
 git init  -- initialising local git repo
 git push  <REMOTENAME> <BRANCHNAME> --> [REMOTENAME-->origin,BRANCHNAME-Name of local branch]---To push the code to remote branch
 git clone repourl
+git clone https://github.com/example/example1.git -b branch_name --Cloning Single branch
 git pull
 git status
 git push
@@ -49,6 +50,10 @@ git push origin master
 git branch -d hotfix  -- Delete branch hotfix
 [git checkout master
 git merge hotfix] --Merging Master branch to Hotfix branch Code
+git ls-remote https://github.com/Chethandc2014/Indian-Railways-App.git  --Listing remote branches before clone
+git ls-remote   -- Listing remote branch after clone
+git checkout branchName --To switch branch from current branch to other branch  
+ 
 
 echo > fileName  --- creating new file
 rm fileName      --- to remove/delete the file 
