@@ -15,7 +15,13 @@ export class AuthenticateService {
     log('Beging of login method UserDtails::' + loginUser);
     let name=loginUser.name;
     let password=loginUser.password;
-    return this.http.get('api/user?name=${name}&&password=${password}').toPromise().then(res => {
+    //let params=new URLSearchParams();
+    //params.append('name',name);
+    //params.append('password',password);
+    //let body=params;
+    let body='name='+name+'&&'+'password='+password;
+    let header=new Headers({'Content-Type':'application/x-www-form-urlencoded'});
+    return this.http.post('http://localhost:8090/IndianRailways/app/loginController/login',body,new RequestOptions({headers:header})).toPromise().then(res => {
       console.log(res.json().data);
       //data=res.json().data.length>0;
     }

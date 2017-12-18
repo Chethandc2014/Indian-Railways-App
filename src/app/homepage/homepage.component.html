@@ -20,28 +20,9 @@
 			<li class="dropdown" (click)="$event.stopPropagation()">
 				<a  href="javascript:void(0);" (click)="opensearchMenu()">TICKET BOOKING</a>
 				<div  class="dropdown-menu" #dp role="menu" [ngClass]="{'showMenu':showDropdownMenu}">
-					<form>
-						<div class="input-group">
-							<label>Source</label> <input class="form-control" type="text" />
-						</div>
-						<div class="input-group">
-							<label>Destination</label> <input class="form-control"
-								type="text" />
-						</div>
-						<div class="input-group">
-							<label>Date of Journey</label>
-							<div class="input-group date">
-								<input type="text" class="form-control" bsDatepicker #dp="bsDatepicker" [bsConfig]="bsConfig" placeholder="MM/DD/YYYY" style="padding-left:41px">
-								<div class="input-group-addon" (click)="dp.show()">
-									<span class="glyphicon glyphicon-calendar" ></span>
-								</div>
-							</div>
-						</div>
-						<div class="input-group">
-							<button class="btn" (click)="addNewTab()" >Search</button>
-						</div>
-					</form>
-				</div></li>
+					<app-search-menu (addNewTabEmitter)="addNewTab($event)"></app-search-menu>
+				</div>
+			</li>
 			<li><a href="javascript:void(0);">FAVOURITE JOURNEYS</a></li>
 			<li><a href="javascript:void(0);">PROFILE</a></li>
 			<li><a href="javascript:void(0);">PYMENT SYSTEM</a></li>
@@ -49,27 +30,21 @@
 	</div>
 	<div class="main-content">
 	
-		<div class="container-fluid" >
-			<!-- <tabset>
-				<tab heading='Tab 1'>Tab 1 content</tab>
-				<tab>
-				  <ng-template tabHeading>Tab 2</ng-template>
-				  Tab 2 content
-				</tab>
-			  </tabset> -->
-	<tabset>
-			<tab *ngFor="let tabz of tabs"
-			[heading]="tabz.title"
-			[active]="tabz.active"
-			(select)="tabz.active = true"
-			(deselect)="tabz.active = false"
-			[disabled]="tabz.disabled"
-			[removable]="tabz.removable"
-			(removed)="removeTabHandler(tabz)"
-			[customClass]="tabz.customClass">
-		     {{tabz?.content}}
-	       </tab>
-	</tabset>
+	<div class="container-fluid" >
+			
+		<tabset>
+				<tab *ngFor="let tabz of tabs" app-dynamic-component-manager 
+				[component]="tabz.component"
+				[searchData]="tabz.searchData"
+				[heading]="tabz.title"
+				[active]="tabz.active"
+				(select)="tabz.active = true"
+				[disabled]="tabz.disabled"
+				[removable]="tabz.removable"
+				(removed)="removeTabHandler(tabz)"
+				[customClass]="tabz.customClass">
+				</tab>	
+		</tabset>
 		</div>
    </div>
 </div>

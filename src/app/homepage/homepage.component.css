@@ -46,7 +46,7 @@ color:white;
 }
 div.main-content{
 	float:left;
-	background-color: aqua;
+	background-color:#4bdbfb;
 	width:calc(100% - 200px);
 	height:100vh;
 }

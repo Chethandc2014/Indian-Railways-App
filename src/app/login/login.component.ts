@@ -26,7 +26,5 @@ export class LoginComponent implements OnInit {
   submit(){
    this.authenticateService.login(this.loginUser);
     //this.router.navigate(['./home']);
-
-    
   }
 }

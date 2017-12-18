@@ -1,5 +1,21 @@
-<div class="container-fluid">
-
-Chethan
+<div class="container-fluid" >
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="th-cent">Row</th>
+                <th class="th-cent">First Name</th>
+                <th class="th-cent">Last Name</th>
+                <th class="th-cent">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let train of trainList">
+                <td>{{train.id}}</td>
+                <td>{{train.name}}</td>
+                <td>{{train.arrTime}}</td>
+                <td>{{train.depTime}}</td>
+            </tr>
+        </tbody>
+    </table>
 
 </div>

@@ -1,0 +1,23 @@
+  <form >
+      <div class="input-group">
+        <label>Source</label> <input class="form-control" type="text" />
+      </div>
+      <div class="input-group">
+        <label>Destination</label> <input class="form-control"
+          type="text" />
+      </div>
+      <div class="input-group">
+        <label>Date of Journey</label>
+        <div class="input-group date">
+          <input type="text" class="form-control" bsDatepicker #dp="bsDatepicker" [bsConfig]="bsConfig" placeholder="MM/DD/YYYY" style="padding-left:41px">
+          <div class="input-group-addon" (click)="dp.show()">
+            <span class="glyphicon glyphicon-calendar" ></span>
+          </div>
+        </div>
+      </div>
+      <div class="input-group">
+        <span class="input-group-btn">
+            <button class="btn" (click)="addNewTab()" style="border-radius:4px;background-color:#15e066" >Search</button>
+        </span>
+      </div>
+    </form>
