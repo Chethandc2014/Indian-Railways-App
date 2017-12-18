@@ -6,7 +6,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## For Runnig Different Port
+ng serve --port 4400
 
+## For Creating Angular Resources using commands
+ng generate <feature> <option> or ng g <fetaure> <option>
+ng g cl className
+ng g i interfaceName
+ng g e EnumerationName
+ng g s serviceName
+ng g d directiveName
+
+  
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
