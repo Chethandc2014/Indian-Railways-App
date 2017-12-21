@@ -7,7 +7,7 @@
 			<div class="form-align">
 		    	<form class="form-horizontal" #LoginForm="ngForm" novalidate>
 				<div class="form-group">
-					<label class="control-label col-xs-12 col-sm-4 col-md-4 col-lg-5">User Name:</label>
+					<label class="control-label col-xs-12 col-sm-4 col-md-4 col-lg-5">User ID:</label>
 					<div class="col-xs-7 col-xs-offset-3 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0 col-lg-4 col-lg-offset-0">
 					<input type="text" class="form-control" placeholder="UserName" name="name" [(ngModel)]="loginUser.name" />
 						<!-- <span [hidden]="" class="alert-danger">Password field is required</span> -->
@@ -20,17 +20,16 @@
 					</div>	<!-- <span [hidden]="!(pwd.errors.dirty)pwd.errors.required" style="color: #ff4e4b">Password field is required</span> -->
 				</div>
 				<div class="form-group" style="margin-top: 10%">
-					<div class="col-md-3 col-md-offset-4 col-lg-4 col-offset-3 ">
+					<div class="col-md-3 col-md-offset-4 col-lg-4 col-lg-offset-4 ">
 						<button type="submit" class="btn btn-primary" [disabled]="!LoginForm.form.valid" (click)="submit()">Login</button>
+						<button type="submit" class="btn btn-success"  (click)="signup()">Signup</button>
 					</div>
 				</div>
 
 				</form>
 			</div>
 		</div>
-		<div class="col-md-12 col-lg-12">
-				<div class="alert alert-danger">User Name/Password is incorrect..</div>
-		</div>
+		
 	 <!--	<pre>Login Form Fields:{{LoginForm.value | json}}</pre>
 		<pre>Form is valide:{{LoginForm.form.valid}}</pre>
 		<pre>Login User Model:{{loginUser}}</pre>

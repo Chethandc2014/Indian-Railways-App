@@ -19,12 +19,15 @@ import { DatepickerHandlerDirective } from './directives/datepicker-handler.dire
 import { SearchMenuComponent } from './search-menu/search-menu.component';
 import { ComponentBinderDirective } from './directives/component-binder.directive';
 import { DynamicComponentManagerComponent } from './dynamic-component-manager/dynamic-component-manager.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 
 const ROUTES:Route[]=[
                      {path:'login',component:LoginComponent}, 
-                     {path:'home',component:HomepageComponent}
+                     {path:'home',component:HomepageComponent},
+                     {path:'registration',component:RegistrationComponent}
+
                      ];
 
 @NgModule({
@@ -36,7 +39,8 @@ const ROUTES:Route[]=[
     DatepickerHandlerDirective,
     SearchMenuComponent,
     ComponentBinderDirective,
-    DynamicComponentManagerComponent
+    DynamicComponentManagerComponent,
+    RegistrationComponent
     
   ],
   entryComponents:[
