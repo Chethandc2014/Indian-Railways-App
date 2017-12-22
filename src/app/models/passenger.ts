@@ -10,6 +10,6 @@ export class Passenger {
     password:string;
     gender:string;
     age:number;
-    address:Address;
+    address:Address=new Address();
 
 }

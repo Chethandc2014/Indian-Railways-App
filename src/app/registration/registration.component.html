@@ -31,6 +31,25 @@
           <span>Female</span><input type="radio"  name="gender" value="F" [ngModelOptions]="{standalone: true}" [(ngModel)]="pass.gender">
         </div>
     </div>
+    Address Details
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="age">House No:</label>
+      <div class="col-sm-2"> 
+        <input type="text" class="form-control" [(ngModel)]="pass.address.houseNo"  [ngModelOptions]="{standalone: true}" placeholder="Enter House No">
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="age">Street:</label>
+    <div class="col-sm-2"> 
+      <input type="text" class="form-control" [(ngModel)]="pass.address.street"  [ngModelOptions]="{standalone: true}" placeholder="Enter Street">
+    </div>
+ </div>
+<div class="form-group">
+  <label class="control-label col-sm-2" for="age">Taluk:</label>
+  <div class="col-sm-2"> 
+    <input type="text" class="form-control" [(ngModel)]="pass.address.taluk"  [ngModelOptions]="{standalone: true}" placeholder="Enter Taluk">
+  </div>
+ </div>
 
     <div class="form-group"> 
       <div class="col-sm-offset-2 col-sm-2">
