@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { RequestOptions } from '@angular/http';
 import { Headers } from '@angular/http';
+import { Input } from '@angular/core';
 
 
 @Component({
@@ -12,16 +13,17 @@ import { Headers } from '@angular/http';
 export class SearchResultComponent implements OnInit {
 
   constructor(private http:Http) { 
-
+    
   }
   myName:string='My Name';
-  searchData:any;
+  searchData:any=[];
   trainList=[
     {name:'Janshtabdi',id:'1231',arrTime:'10.10AM',depTime:'10.30AM'},
     {name:'Janshtabdi',id:'1231',arrTime:'10.10AM',depTime:'10.30AM'}
   ];
   ngOnInit() {
-   let headers=new Headers({'Content-Type':'application/json'});
+    this.trainList=this.searchData;
+  /*  let headers=new Headers({'Content-Type':'application/json'});
    let reqOptions=new RequestOptions({headers:headers});
    let train={
     "trainNo":"123",
@@ -33,7 +35,7 @@ export class SearchResultComponent implements OnInit {
     };
     this.http.post('http://localhost:8090/IndianRailways/app/appController/booking',train,reqOptions).subscribe(res=>{
       console.log(res);
-    });
+    }); */
   }
 
 }

@@ -1,15 +1,18 @@
   <form >
       <div class="input-group">
-        <label>Source</label> <input class="form-control" type="text" />
+        <label>Source</label> 
+        <input class="form-control" type="text" [(ngModel)]="search.sourceStn" [ngModelOptions]="{standalone: true}" />
       </div>
       <div class="input-group">
-        <label>Destination</label> <input class="form-control"
+        <label>Destination</label> 
+        <input class="form-control"       [(ngModel)]="search.destinationStn" [ngModelOptions]="{standalone: true}"
           type="text" />
       </div>
       <div class="input-group">
         <label>Date of Journey</label>
         <div class="input-group date">
-          <input type="text" class="form-control" bsDatepicker #dp="bsDatepicker" [bsConfig]="bsConfig" placeholder="MM/DD/YYYY" style="padding-left:41px">
+          <input type="text" class="form-control" bsDatepicker #dp="bsDatepicker" [bsConfig]="bsConfig" [(ngModel)]="search.dateOfJourney"
+           placeholder="DD/MM/YYYY" style="padding-left:41px" [ngModelOptions]="{standalone: true}">
           <div class="input-group-addon" (click)="dp.show()">
             <span class="glyphicon glyphicon-calendar" ></span>
           </div>
@@ -17,7 +20,7 @@
       </div>
       <div class="input-group">
         <span class="input-group-btn">
-            <button class="btn" (click)="addNewTab()" style="border-radius:4px;background-color:#15e066" >Search</button>
+            <button class="btn" (click)="searchData()" style="border-radius:4px;background-color:#15e066" >Search</button>
         </span>
       </div>
     </form>
