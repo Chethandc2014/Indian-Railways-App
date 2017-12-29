@@ -50,13 +50,13 @@ export class SearchMenuComponent implements OnInit {
    //httpPram.set('dateOfJourney',this.search.dateOfJourney.toDateString());
 
   let options=new RequestOptions({headers:header,params:urlParams});
-    this.http.get("http://localhost:8000/IndianRailways/app/passangerCtrl/search",options).subscribe(response=>{//No bracket required for one parameter in arrow function
+    this.http.get("http://localhost:8050/IndianRailways/app/passangerCtrl/search",options).subscribe(response=>{//No bracket required for one parameter in arrow function
       console.log(response.json());
      if(response.status==200){
 
-      let rawResponse=response.json();
-      let jsonResponse=JSON.parse(rawResponse['response']);
-      let tranList=jsonResponse.trainList;
+      let jsonResponse=response.json();
+      let tranList=JSON.parse(jsonResponse.trainList);
+      console.log(tranList);
       this.addNewTab(tranList);
      }else{
        //NoData or Server Issue...

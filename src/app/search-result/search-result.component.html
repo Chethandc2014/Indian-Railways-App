@@ -2,18 +2,18 @@
     <table class="table">
         <thead>
             <tr>
-                <th class="th-cent">Row</th>
-                <th class="th-cent">First Name</th>
-                <th class="th-cent">Last Name</th>
-                <th class="th-cent">Email</th>
+                <th class="th-cent">Train ID</th>
+                <th class="th-cent">Train Model</th>
+                <th class="th-cent">Train Name</th>
+                <th class="th-cent">Avg Speed</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let train of trainList">
-                <td>{{train.id}}</td>
-                <td>{{train.name}}</td>
-                <td>{{train.arrTime}}</td>
-                <td>{{train.depTime}}</td>
+                <td>{{train.trainId}}</td>
+                <td>{{train.trainModel}}</td>
+                <td>{{train.trainName}}</td>
+                <td>{{train.trainAvgSpeed}}</td>
             </tr>
         </tbody>
     </table>

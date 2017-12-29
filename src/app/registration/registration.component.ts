@@ -3,6 +3,7 @@ import { Passenger } from 'app/models/passenger';
 import { Http } from '@angular/http';
 import { RequestOptions,Headers} from '@angular/http';
 
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -15,11 +16,13 @@ export class RegistrationComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.getStates();
   }
 
   pass:Passenger=new Passenger();
+  stateList=[];
 
-  register(){
+  register():void {
     console.log(this.pass);
     let header=new Headers({'Content-Type':'application/json'});
     let body=this.pass;
@@ -29,5 +32,23 @@ export class RegistrationComponent implements OnInit {
     });
 
   }
+
+  getStates():void {
+
+    this.http.get('http://localhost:8050/IndianRailways/app/appController/registration/dropdowns/states').subscribe(response=>{
+      console.log(response.json());
+    if(response.status==200){
+      let jsonResponse=response.json();
+      this.stateList=JSON.parse(jsonResponse.stateList);
+      console.log(this.stateList);
+    }else{
+       //NoData or Server Issue...
+    }
+
+    });
+
+  } 
+
+
 
 }
