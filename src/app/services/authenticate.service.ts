@@ -5,11 +5,12 @@ import { Observable } from 'rxjs/Observable';
 
 import {log} from 'util';
 import 'rxjs/add/operator/toPromise';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthenticateService {
 
-  constructor(private http: Http) {}
+  constructor(private http: Http,private router:Router) {}
 
   login(loginUser: User): Promise<any> {
     log('Beging of login method UserDtails::' + loginUser);
@@ -21,9 +22,18 @@ export class AuthenticateService {
     //let body=params;
     let body='name='+name+'&&'+'password='+password;
     let header=new Headers({'Content-Type':'application/x-www-form-urlencoded'});
-    return this.http.post('http://localhost:8090/IndianRailways/app/loginController/login',body,new RequestOptions({headers:header})).toPromise().then(res => {
-      console.log(res.json().data);
-      //data=res.json().data.length>0;
+    return this.http.post('http://localhost:8000/IndianRailways/app/loginController/login',body,new RequestOptions({headers:header})).toPromise().then(res => {
+     // console.log(res.json());
+    let responseStr=res.json();
+       if(res.status==200){
+        let responseJson=JSON.parse(responseStr);
+        if(responseJson.isLoginSuccess){
+          this.router.navigate(['./home']);
+        }else{
+          //UserID or Password is wrong...
+        }
+       }
+     
     }
     );
   }

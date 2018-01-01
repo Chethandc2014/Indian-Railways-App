@@ -3,17 +3,24 @@
         <thead>
             <tr>
                 <th class="th-cent">Train ID</th>
-                <th class="th-cent">Train Model</th>
                 <th class="th-cent">Train Name</th>
-                <th class="th-cent">Avg Speed</th>
+                <th class="th-cent">1A</th>
+                <th class="th-cent">2A</th>
+                <th class="th-cent">3A</th>
+                <th class="th-cent">SL</th>
+                <th class="th-cent">2S</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let train of trainList">
                 <td>{{train.trainId}}</td>
-                <td>{{train.trainModel}}</td>
                 <td>{{train.trainName}}</td>
-                <td>{{train.trainAvgSpeed}}</td>
+                <td>2</td>
+                <td>34</td>
+                <td>3</td>
+                <td>12</td>
+                <td>43</td>
+                <td><button class="btn"     (click)="bookTicket()" >BOOK-TICKET</button></td>
             </tr>
         </tbody>
     </table>

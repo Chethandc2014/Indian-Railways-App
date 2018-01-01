@@ -1,4 +1,11 @@
 <div class="container-fluid">
+  <div style="height:50px;">
+
+  </div>
+  <div [hidden]="!showMessage">
+    {{message}}<br>
+    Click <a href="http://localhost:4200/login">here</a> for Login Page...
+  </div>
   <form class="form-horizontal" #registrationForm="ngForm" >
     <div class="form-group">
       <label class="control-label col-sm-2" for="userId">User ID:</label>
@@ -57,5 +64,4 @@
       </div>
     </div>
   </form>
-
 </div>

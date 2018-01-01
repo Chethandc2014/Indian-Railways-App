@@ -38,4 +38,29 @@ export class SearchResultComponent implements OnInit {
     }); */
   }
 
+  bookTicket(){
+
+  let headers=new Headers({'Content-Type':'application/json'});
+   let reqOptions=new RequestOptions({headers:headers});
+   let train={
+    "trainNo":"1235",
+    "routeId":"1",
+    "seatType":"1A",
+    "dateOfJourney":"22/12/2017"
+    };
+    this.http.post('http://localhost:8000/IndianRailways/app/passangerCtrl/booking',train,reqOptions).subscribe(res=>{
+      if(res.status==200){
+        let jsonResponse=res.json();
+        console.log(jsonResponse);
+        if(JSON.parse(jsonResponse.response).isBokingSuccess){
+          console.log("Booking done successfully.....");
+        }else{
+          //
+        }
+      }
+    }); 
+
+  }
+
+
 }
