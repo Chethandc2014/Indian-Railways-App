@@ -67,6 +67,7 @@ mkdir            --- to create the folder
 rmdir directoryname   --- removes the Directory (Empty directory) 
 rm -r directoryName   --- removoes the directory and it's content's
 rm -rf /path/to/directory/*    --- remoes all files and it's contents except folder
+mv f1 f2 -- rename/move file f1 to f2
 
 > fileName     --- shot form to create new Fil
 When you are done, press ESC to return to reading mode.
